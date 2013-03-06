@@ -1,5 +1,6 @@
 StreamProcess
 ============
+[![Build Status](https://travis-ci.org/christiaan/stream-process.png?branch=master)](https://travis-ci.org/christiaan/stream-process)
 
 Easily spawn processes and communicate with them using streams. Mainly build to be used together with [react/event-loop](https://packagist.org/packages/react/event-loop).
 
