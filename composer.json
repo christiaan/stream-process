@@ -1,0 +1,27 @@
+{
+    "name": "christiaan/stream-process",
+    "type": "library",
+    "description": "Wrapper around proc_open to ease communication via streams between processes",
+    "keywords": ["proc_open", "process", "stream", "react", "event-loop"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christiaan Baartse",
+            "email": "anotherhero@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0" : {
+            "Christiaan\\StreamProcess" : "src"
+        }
+    },
+    "require": {
+        "php": ">= 5.3.2"
+    },
+    "suggest": {
+        "react/event-loop": "Allows easier working with streams and waiting till data is available"
+    },
+    "require-dev": {
+        "react/event-loop": "*"
+    }
+}
