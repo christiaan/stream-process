@@ -22,6 +22,7 @@
         "react/event-loop": "Allows easier working with streams and waiting till data is available"
     },
     "require-dev": {
-        "react/event-loop": "*"
+        "react/event-loop": "*",
+        "mkraemer/react-pcntl": "dev-master"
     }
 }

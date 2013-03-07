@@ -9,13 +9,14 @@ $loop->addReadStream(STDIN, function($stream) use($loop) {
         fwrite(STDERR, $data);
     });
 
-$loop->addPeriodicTimer(1, function() {
+$loop->addPeriodicTimer(1000000, function() {
         pcntl_signal_dispatch();
     });
 
 
-pcntl_signal(SIGTERM, function() use($loop) {
-        $loop->stop();
+$pcntl = new \MKraemer\ReactPCNTL\PCNTL($loop);
+
+$pcntl->on(SIGTERM, function() {
         exit(0);
     });
 $loop->run();
