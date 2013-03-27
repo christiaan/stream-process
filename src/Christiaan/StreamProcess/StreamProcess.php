@@ -144,7 +144,7 @@ class StreamProcess
         return $this->returnCode;
     }
 
-    public function terminate($signal = SIGTERM)
+    public function terminate($signal = 15)
     {
         if (!$this->isOpen()) {
             throw new Exception('Trying to terminate non open process', Exception::NOT_OPEN);
