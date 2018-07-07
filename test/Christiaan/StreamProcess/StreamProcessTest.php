@@ -1,12 +1,14 @@
 <?php
 namespace Christiaan\StreamProcess;
 
+use PHPUnit\Framework\TestCase;
+
 function function_exists($function)
 {
     return StreamProcessTest::$functionExists;
 }
 
-class StreamProcessTest extends \PHPUnit_Framework_TestCase
+class StreamProcessTest extends TestCase
 {
     public static $functionExists = true;
 

@@ -23,6 +23,10 @@
     },
     "require-dev": {
         "react/event-loop": "*",
-        "mkraemer/react-pcntl": "dev-master"
+        "mkraemer/react-pcntl": "dev-master",
+        "phpunit/phpunit": "^7.2"
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
