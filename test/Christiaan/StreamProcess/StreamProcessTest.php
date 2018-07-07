@@ -66,6 +66,17 @@ class StreamProcessTest extends TestCase
         $this->assertEquals('test' . PHP_EOL, $out);
     }
 
+    public function testClosingWriteStreamEarlyGivesNoError()
+    {
+        $echoer = $this->getEchoer();
+        $this->assertTrue($echoer->isRunning());
+
+        fclose($echoer->getWriteStream());
+
+        $echoer->terminate();
+        $echoer->close();
+    }
+
     private function waitTillStop(StreamProcess $process)
     {
         $i = 0;

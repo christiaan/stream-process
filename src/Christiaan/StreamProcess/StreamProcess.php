@@ -144,6 +144,10 @@ class StreamProcess
         return $this->returnCode;
     }
 
+    /**
+     * @param int $signal
+     * @throws Exception when the process is already closed or not running
+     */
     public function terminate($signal = 15)
     {
         if (!$this->isOpen()) {
@@ -154,7 +158,9 @@ class StreamProcess
         }
 
         foreach ($this->pipes as $stream) {
-            fclose($stream);
+            if (is_resource($stream)) {
+                fclose($stream);
+            }
         }
 
         if ($this->workaroundLinuxBug()) {
